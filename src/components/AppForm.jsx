@@ -3,7 +3,7 @@ import { Button, Col, Form, Row, Container } from "react-bootstrap";
 function AppForm() {
   return (
     <Container>
-      <Form>
+      <Form className="mt-5 text-white">
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
