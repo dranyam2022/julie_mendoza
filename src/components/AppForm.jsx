@@ -3,7 +3,30 @@ import { Button, Col, Form, Row, Container } from "react-bootstrap";
 function AppForm() {
   return (
     <Container>
-      <Form className="mt-5 text-white">
+      <Form className="my-5  text-white">
+        <Row className="mb-3">
+          <fieldset>
+            <Form.Group as={Row} className="mb-3">
+              <Form.Label as="legend" column sm={2}>
+                Gender
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Check
+                  type="radio"
+                  label="male"
+                  name="formHorizontalRadios"
+                  id="formHorizontalRadios1"
+                />
+                <Form.Check
+                  type="radio"
+                  label="female"
+                  name="formHorizontalRadios"
+                  id="formHorizontalRadios2"
+                />
+              </Col>
+            </Form.Group>
+          </fieldset>
+        </Row>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
