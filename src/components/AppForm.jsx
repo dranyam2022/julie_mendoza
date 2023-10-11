@@ -1,75 +1,150 @@
-import { Button, Col, Form, Row, Container } from "react-bootstrap";
+import { Button, Form, Container } from "react-bootstrap";
 
 function AppForm() {
   return (
     <Container>
       <Form className="my-5  text-white">
-        <Row className="mb-3">
-          <fieldset>
-            <Form.Group as={Row} className="mb-3">
-              <Form.Label as="legend" column sm={2}>
-                Gender
-              </Form.Label>
-              <Col sm={10}>
-                <Form.Check
-                  type="radio"
-                  label="male"
-                  name="formHorizontalRadios"
-                  id="formHorizontalRadios1"
-                />
-                <Form.Check
-                  type="radio"
-                  label="female"
-                  name="formHorizontalRadios"
-                  id="formHorizontalRadios2"
-                />
-              </Col>
-            </Form.Group>
-          </fieldset>
-        </Row>
-
-        <Form.Group controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+        <Form.Group className="mb-3">
+          <Form.Label>Career Apirations</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="medicine">medicine</option>
+            <option value="engineering">engineering</option>
+            <option value="arts">arts</option>
+            <option value="business">business</option>
+            <option value="technology">technology</option>
+            <option value="education">education</option>
+            <option value="others">others</option>
+          </Form.Select>
         </Form.Group>
 
-        <Form.Group controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+        <Form.Group className="mb-3">
+          <Form.Label>Gender</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </Form.Select>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Address</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
+        <Form.Group className="mb-3">
+          <Form.Label>Learning style preference</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="visual">visual</option>
+            <option value="auditory">Female</option>
+            <option value="reading/writing">reading/writing</option>
+            <option value="kinesthetic">kinesthetic</option>
+          </Form.Select>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formGridAddress2">
-          <Form.Label>Address 2</Form.Label>
-          <Form.Control placeholder="Apartment, studio, or floor" />
+        <Form.Group className="mb-3">
+          <Form.Label>Highest Highschool Achievement</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="with highest honor">With Highest Honor</option>
+            <option value="high honor">High Honor</option>
+            <option value="honor">Honor</option>
+            <option value="none">none</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Socioeconomic status</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="upper">upper</option>
+            <option value="upper-middle">upper-middle</option>
+            <option value="lower-middle">lower-middle</option>
+            <option value="upper-lower">upper-lower</option>
+            <option value="lower">lower</option>
+          </Form.Select>
         </Form.Group>
 
-        <Row className="mb-3">
-          <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>City</Form.Label>
-            <Form.Control />
-          </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Academic Term</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="4">4 years</option>
+            <option value="3">3 years</option>
+            <option value="2">2 years</option>
+          </Form.Select>
+        </Form.Group>
 
-          <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>State</Form.Label>
-            <Form.Select defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>...</option>
-            </Form.Select>
-          </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Skills/Hobbies</Form.Label>
+          <Form.Check
+            type="checkbox"
+            id="technicalSkills"
+            label="Technical skills (e.g. programming, design)"
+          />
+          <Form.Check // prettier-ignore
+            type="checkbox"
+            id="creativeSkills"
+            label="Creative skills (e.g. painting, writing)"
+          />
 
-          <Form.Group as={Col} controlId="formGridZip">
-            <Form.Label>Zip</Form.Label>
-            <Form.Control />
-          </Form.Group>
-        </Row>
+          <Form.Check // prettier-ignore
+            type="checkbox"
+            id="sports"
+            label="Sports or physical activities"
+          />
+          <Form.Check // prettier-ignore
+            type="checkbox"
+            id="musicalTalents"
+            label="Musical talents"
+          />
+          <Form.Check // prettier-ignore
+            type="checkbox"
+            id="communicationSkills"
+            label="Communication skills"
+          />
+          <Form.Check // prettier-ignore
+            type="checkbox"
+            id="leadershipActivities"
+            label="Leadership Activities"
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Pear Influence</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="full scholarship">full scholarship</option>
+            <option value="partial scholarship">partial scholarship</option>
+            <option value="need-based financial aid">
+              need-based financial aid
+            </option>
+            <option value="merit-based financial aid">
+              merit-based financial aid
+            </option>
+          </Form.Select>
+        </Form.Group>
 
-        <Form.Group className="mb-3" id="formGridCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+        <Form.Group className="mb-3">
+          <Form.Label>Financial aid or scholarship</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="neutral">Neutral</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Pear Influence</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="neutral">Neutral</option>
+          </Form.Select>
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Industry relevance</Form.Label>
+          <Form.Select aria-label="Default select example">
+            <option value="...">...</option>
+            <option value="high">high demand and growth</option>
+            <option value="stable">stable ebut competitive</option>
+            <option value="niche">niche or specialized</option>
+          </Form.Select>
         </Form.Group>
 
         <Button variant="primary" type="submit">
