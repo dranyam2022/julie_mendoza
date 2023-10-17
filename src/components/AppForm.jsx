@@ -1,8 +1,16 @@
-import { Button, Form, Container } from "react-bootstrap";
+import { Row, Col, Button, Form } from "react-bootstrap";
+import { useState } from "react";
 
 function AppForm() {
+  const [regionVal, setRegionVal] = useState("0");
+
+  function handleRegionChange(event) {
+    const val = event.target.value;
+    setRegionVal(val);
+  }
+  console.log(regionVal);
   return (
-    <Container>
+    <Col>
       <Form className="my-5  text-white">
         <Form.Group className="mb-3">
           <Form.Label>Career Apirations</Form.Label>
@@ -147,11 +155,32 @@ function AppForm() {
           </Form.Select>
         </Form.Group>
 
+        <Form.Group className="mb-3">
+          <Form.Label>Location</Form.Label>
+          <Row>
+            <Col>
+              <Form.Select value={regionVal} onChange={handleRegionChange}>
+                <option value="0">Select Region</option>
+                <option value="1">National Capital Region(NCR)</option>
+              </Form.Select>
+            </Col>
+            <Col>
+              <Form.Select>
+                {regionVal === "0" ? (
+                  <option value="0">Select Location</option>
+                ) : (
+                  <option value="1">test1</option>
+                )}
+              </Form.Select>
+            </Col>
+          </Row>
+        </Form.Group>
+
         <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
-    </Container>
+    </Col>
   );
 }
 
